@@ -1,6 +1,6 @@
 <?php 
 
-class Admin extends CI_Controller{
+class Dashboard extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
@@ -15,7 +15,7 @@ class Admin extends CI_Controller{
 	function index(){
 		$data['judul'] = 'Halaman Admin Handson Kelola.net';
 		$this->load->view('templates/header', $data);
-		$this->load->view('v_admin');
+		$this->load->view('dashboard/index');
 		$this->load->view('templates/footer');
 	}
 
