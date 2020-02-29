@@ -1,6 +1,8 @@
 {
-	"description": "Testing",
-	"name": "Lexy ganteng",
+
+	"description": "The Dito CodeIgniter framework",
+	"name": "codeigniter/framework",
+
 	"type": "project",
 	"homepage": "https://codeigniter.com",
 	"license": "MIT",
