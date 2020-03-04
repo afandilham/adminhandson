@@ -36,7 +36,7 @@ class Login extends CI_Controller
 			);
 			$data['pesan'] = 'sukses';
 			$this->session->set_userdata($data_session);
-
+ 
 			redirect(base_url("dashboard"));
 		} else {
 			$data['pesan'] = 'gagal';

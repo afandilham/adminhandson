@@ -19,24 +19,4 @@ class Dashboard extends CI_Controller{
 		$this->load->view('templates/footer');
 	}
 
-	
-
-	function register_user() 
-    {
-        $hashed_password = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
-        $data = array(
-            'username' => $this->input->post('username'),
-            'password' => $hashed_password,
-            'email' => $this->input->post('email')
-        );
-        $data = $this->security->xss_clean($data);
-        $result = $this->m_register->registration_insert($data);
-        if ($result == TRUE) {
-            $data['message_display'] = 'Registration Successfully !';
-            redirect('login/index', $data);
-        } else {
-            $data['message_display'] = 'Username already exist!';
-            redirect('register/index', $data);
-        }
-    }
 }

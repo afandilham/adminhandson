@@ -19,13 +19,26 @@ class Dokter extends CI_Controller
     function index()
     {
         $data['judul'] = 'Manage Dokter';
-        $data['data']=$this->m_dokter->display();
         $this->load->view('templates/header', $data);
-        $this->load->view('dokter/index', $data);
+        $this->load->view('dokter/index');
         $this->load->view('templates/footer');
+    }
 
+    function insert(){
+        $data['judul'] = 'Insert Dokter';
+        $this->load->view('templates/header', $data);
+        $this->load->view('dokter/insert_dokter');
+        $this->load->view('templates/footer');
+    }
 
+    function update(){
+        $data['judul'] = 'Update Dokter';
+        $this->load->view('templates/header', $data);
+        $this->load->view('dokter/update_dokter');
+        $this->load->view('templates/footer');
+    }
 
-        echo 's';
+    function delete(){
+
     }
 }
