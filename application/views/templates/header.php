@@ -133,14 +133,23 @@
                 <a href="<?= base_url() ?>dashboard">
                   <i class="metismenu-icon"></i>Dashboard
                 </a>
+                <ul>
+                </ul>
               </li>
               <li>
-                <a href="#">
+                <a href="<?= base_url() ?>course">
                   <i class="metismenu-icon"></i>Course
                 </a>
+                <ul>
+                  <li>
+                    <a href="<?= base_url() ?>dashboard">
+                      <i class="metismenu-icon"></i>Course Video
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li>
-                <a href="#">
+                <a href="<?= base_url() ?>user">
                   <i class="metismenu-icon"></i>User
                 </a>
               </li>
@@ -150,17 +159,17 @@
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="<?= base_url() ?>kategori">
                   <i class="metismenu-icon"></i>Kategori
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="<?= base_url() ?>pembayaran">
                   <i class="metismenu-icon"></i>Pembayaran
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="<?= base_url() ?>log">
                   <i class="metismenu-icon"></i>Log Aktivitas
                 </a>
               </li>
