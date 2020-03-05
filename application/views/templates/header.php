@@ -51,13 +51,7 @@
       </div>
       <div class="app-header__content">
         <div class="app-header-left">
-          <div class="search-wrapper">
-            <div class="input-holder">
-              <input type="text" class="search-input" placeholder="Type to search">
-              <button class="search-icon"><span></span></button>
-            </div>
-            <button class="close"></button>
-          </div>
+
         </div>
         <div class="app-header-right">
           <div class="header-btn-lg pr-0">
@@ -79,9 +73,7 @@
                                 <div class="widget-content-left mr-3">
                                 </div>
                                 <div class="widget-content-left">
-                                  <div class="widget-heading">
-                                    <?= $this->session->userdata("nama") ?>
-                                  </div>
+                                  <div class="widget-heading"><?= $this->session->userdata("nama") ?></div>
                                 </div>
                               </div>
                             </div>
@@ -144,7 +136,7 @@
                   </li>
                   <li>
                     <a href="<?= base_url() ?>">
-                      <i class="metismenu-icon"></i>Video Kursus 
+                      <i class="metismenu-icon"></i>Video Kursus
                     </a>
                   </li>
                   <li>
