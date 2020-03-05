@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="widget-content-left">
                                   <div class="widget-heading">
-                                    <?= $this->session->userdata("nama")?>
+                                    <?= $this->session->userdata("nama") ?>
                                   </div>
                                 </div>
                               </div>
@@ -108,7 +108,7 @@
                         <li class="nav-item-divider nav-item">
                         </li>
                         <li class="nav-item-btn text-center nav-item">
-                          <a href="<?= base_url()?>login/logout" class="btn-wide btn btn-primary btn-sm">Logout</a>
+                          <a href="<?= base_url() ?>login/logout" class="btn-wide btn btn-primary btn-sm">Logout</a>
                         </li>
                       </ul>
                     </div>
@@ -133,18 +133,23 @@
 
               </li>
               <li>
-                <a href="<?= base_url() ?>course">
-                  <i class="metismenu-icon"></i>Course
+                <a href="<?= base_url() ?>kursus">
+                  <i class="metismenu-icon"></i>Kursus
                 </a>
                 <ul>
                   <li>
-                    <a href="<?= base_url() ?>course">
-                      <i class="metismenu-icon"></i>Manage Course
+                    <a href="<?= base_url() ?>kursus">
+                      <i class="metismenu-icon"></i>Manage Kursus
                     </a>
                   </li>
                   <li>
                     <a href="<?= base_url() ?>">
-                      <i class="metismenu-icon"></i>Course Video
+                      <i class="metismenu-icon"></i>Video Kursus 
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?= base_url() ?>">
+                      <i class="metismenu-icon"></i>Quiz
                     </a>
                   </li>
                 </ul>
@@ -162,6 +167,11 @@
               <li>
                 <a href="<?= base_url() ?>kategori">
                   <i class="metismenu-icon"></i>Kategori
+                </a>
+              </li>
+              <li>
+                <a href="<?= base_url() ?>bahasa">
+                  <i class="metismenu-icon"></i>Bahasa
                 </a>
               </li>
               <li>

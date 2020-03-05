@@ -1,6 +1,6 @@
 <?php
 
-class Kategori extends CI_Controller
+class Kursus extends CI_Controller
 {
 
     function __construct()
@@ -10,7 +10,7 @@ class Kategori extends CI_Controller
         if ($this->session->userdata('status') != "login") {
             redirect(base_url("login"));
         }
-        //$this->load->model('m_kategori');
+        //$this->load->model('m_kursus');
         $this->load->helper('form');
         $this->load->database();
         $this->load->helper('url');
@@ -18,23 +18,23 @@ class Kategori extends CI_Controller
 
     function index()
     {
-        $data['judul'] = 'Manage Kategori';
+        $data['judul'] = 'Manage Kursus';
         $this->load->view('templates/header', $data);
-        $this->load->view('kategori/index');
+        $this->load->view('kursus/index');
         $this->load->view('templates/footer');
     }
 
     function insert(){
-        $data['judul'] = 'Insert Kategori';
+        $data['judul'] = 'Insert Kursus';
         $this->load->view('templates/header', $data);
-        $this->load->view('kategori/insert_kategori');
+        $this->load->view('kursus/insert_kursus');
         $this->load->view('templates/footer');
     }
 
     function update(){
-        $data['judul'] = 'Update Kategori';
+        $data['judul'] = 'Update Kursus';
         $this->load->view('templates/header', $data);
-        $this->load->view('kategori/update_kategori');
+        $this->load->view('kursus/update_kursus');
         $this->load->view('templates/footer');
     }
 
