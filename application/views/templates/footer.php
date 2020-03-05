@@ -1,1 +1,4 @@
-<script type="text/javascript" src="<?= base_url()?>assets/scripts/main.87c0748b313a1dda75f5.js"> </script> </html>
+            </div>
+        </div>
+    </body>
+</html>
