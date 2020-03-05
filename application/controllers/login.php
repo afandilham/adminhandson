@@ -13,10 +13,9 @@ class Login extends CI_Controller
 	function index()
 	{
 		$data['judul'] = 'Login Admin Handson Kelola.net';
-		$this->load->view('templates/header', $data);
+		
 		$this->load->helper('form');
 		$this->load->view('v_login', $data);
-		$this->load->view('templates/footer');
 	}
 
 	function aksi_login()
