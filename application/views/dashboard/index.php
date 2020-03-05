@@ -12,54 +12,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="page-title-actions">
-                    <div class="d-inline-block dropdown">
-                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-shadow dropdown-toggle btn btn-info">
-                            <span class="btn-icon-wrapper pr-2 opacity-7">
-                                <i class="fa fa-business-time fa-w-20"></i>
-                            </span>
-                            Edit
-                        </button>
-                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link">
-                                        <i class="nav-link-icon lnr-inbox"></i>
-                                        <span>
-                                            Create
-                                        </span>
 
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">
-                                        <i class="nav-link-icon lnr-book"></i>
-                                        <span>
-                                            Insert
-                                        </span>
-
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">
-                                        <i class="nav-link-icon lnr-picture"></i>
-                                        <span>
-                                            Update
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a disabled class="nav-link disabled">
-                                        <i class="nav-link-icon lnr-file-empty"></i>
-                                        <span>
-                                            Delete
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="tabs-animation">
@@ -142,6 +95,12 @@
                         </span>
                         <span class="mr-1">View Complete Report</span>
                     </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="card-title">World Map</div>
+                    <div id="world-map-gdp" style="width: 100%; height: 300px;"></div>
                 </div>
             </div>
             <div class="row">
@@ -352,8 +311,3 @@
         </div>
     </div>
 </div>
-
-</div>
-</div>
-
-</body>
