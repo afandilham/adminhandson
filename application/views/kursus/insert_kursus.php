@@ -8,52 +8,63 @@
                     <label for="judulkursus" class="">Judul</label>
                     <input name="judulkursus" type="text" class="form-control">
 
+                    <label for="harga" class="">Harga</label>
+                    <input name="harga" type="text" class="form-control">
+                    <div class="divider"></div>
+
                     <label for="deskripsisingkat" class="">Deskripsi Singkat</label>
                     <textarea name="deskripsisingkat" type="textarea" class="form-control"> </textarea>
 
                     <label for="deskripsifull" class="">Deskripsi Full</label>
                     <textarea name="deskripsifull" type="textarea" class="form-control"> </textarea>
 
-                    <label for="harga" class="">Harga</label>
-                    <input name="harga" type="text" class="form-control">
 
                     <label for="persyaratan" class="">Persyaratan</label>
                     <textarea name="persyaratan" type="textarea" class="form-control"> </textarea>
 
                     <label for="dokterpengajar" class="">Dokter Pengajar</label>
                     <textarea name="dokterpengajar" type="textarea" class="form-control"> </textarea>
+                    <div class="divider"></div>
 
-                    <label for="kategorikursus" class="">Kategori Kursus</label>
-                    <h6><select name="kategorikursus">
-                            <option value="gigigeraham">Gigi Geraham</option>
+                    <label for="kategori" class="">Kategori</label>
+                    <select name="kategori" class="mb-2 form-control">
+                        <?php
+                        foreach ($kategori as $row) { ?>
+                            <option value="gigigeraham"><?=$row->id_kategori?></option>
                             <option value="gigisusu">Gigi Susu</option>
                             <option value="gigidepan">Gigi Depan</option>
                             <option value="behelgigi">Behel Gigi</option>
                             <option value="kesehatangigi">Kesehatan Gigi</option>
-                        </select>
+                        <?php } ?>
+                    </select>
+                    <div class="divider"></div>
 
-                        <div class="divider"></div>
 
-                        <label for="bahasa" class="">Bahasa</label>
-                        <h6><select name="bahasa">
-                                <option value="bhsindonesia">Bahasa Indonesia</option>
-                                <option value="bhsinggris">Bahasa Inggris</option>
-                                <option value="bhsarab">Bahasa Arab</option>
-                                <option value="bhsjerman">Bahasa Jerman</option>
-                                <option value="bhsrusia">Bahasa Rusia</option>
-                            </select>
+                    <label for="bahasa" class="">Bahasa</label>
+                    <select name="bahasa" class="mb-2 form-control">
 
-                            <div class="divider"></div>
+                        <option value="bhsindonesia">Bahasa Indonesia</option>
+                        <option value="bhsinggris">Bahasa Inggris</option>
+                        <option value="bhsarab">Bahasa Arab</option>
+                        <option value="bhsjerman">Bahasa Jerman</option>
+                        <option value="bhsrusia">Bahasa Rusia</option>
 
-                            <label for="subtitle" class="">Subtitle</label>
-                            <h6><select name="subtitle">
-                                    <option value="indonesia">Indonesia</option>
-                                    <option value="inggris">Inggris</option>
-                                    <option value="arab">Arab</option>
-                                </select>
+                    </select>
+                    <div class="divider"></div>
 
-                                <div class="divider"></div>
-                                <button type="submit" class="btn btn-primary" name="insert">Insert</button>
+                    <label for="subtitle" class="">Subtitle</label>
+                    <select name="subtitle" class="mb-2 form-control">
+
+                        <option value="indonesia">Indonesia</option>
+                        <option value="inggris">Inggris</option>
+                        <option value="arab">Arab</option>
+
+                    </select>
+                    <div class="divider"></div>
+                    <label for="gambar" class="">File Gambar</label>
+                    <input name="gambar" type="file" class="form-control-file">
+                    <div class="divider"></div>
+                    <button type="submit" class="btn btn-primary" name="insert">Insert</button>
                 </form>
             </div>
         </div>
