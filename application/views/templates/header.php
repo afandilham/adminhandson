@@ -157,16 +157,6 @@
                 </a>
               </li>
               <li>
-                <a href="<?= base_url() ?>kategori">
-                  <i class="metismenu-icon"></i>Kategori
-                </a>
-              </li>
-              <li>
-                <a href="<?= base_url() ?>bahasa">
-                  <i class="metismenu-icon"></i>Bahasa
-                </a>
-              </li>
-              <li>
                 <a href="<?= base_url() ?>pembayaran">
                   <i class="metismenu-icon"></i>Pembayaran
                 </a>
@@ -175,6 +165,23 @@
                 <a href="<?= base_url() ?>log">
                   <i class="metismenu-icon"></i>Log Aktivitas
                 </a>
+              </li>
+              <li>
+                <a href="<?= base_url() ?>lainnya">
+                  <i class="metismenu-icon"></i>Lainnya
+                </a>
+                <ul>
+                  <li>
+                    <a href="<?= base_url() ?>kategori">
+                      <i class="metismenu-icon"></i>Kategori
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?= base_url() ?>bahasa">
+                      <i class="metismenu-icon"></i>Bahasa
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

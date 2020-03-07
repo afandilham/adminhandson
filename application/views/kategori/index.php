@@ -21,24 +21,32 @@
                             <th>ID</th>
                             <th>Nama Kategori</th>
                             <th>Deskripsi</th>
+                            <th>Insert By</th>
                             <th>Insert Date</th>
                             <th>Last Update</th>
                             <th>Menu</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>test</td>
-                            <td><a href="<?= base_url(); ?>" class="badge badge-danger ">Hapus</a>
-                                <a href="<?= base_url(); ?>kategori/update" class="badge badge-success ">Update</a>
-                                <a href="<?= base_url(); ?>" class="badge badge-primary ">Detail</a>
-                            </td>
-                        </tr>
+                        <?php
+                        foreach ($kategori as $row) {
+                            echo "<tr>";
+                            echo "<td>" . $row->id_kategori . "</td>";
+                            echo "<td>" . $row->kategori . "</td>";
+                            echo "<td>" . $row->deskripsi . "</td>";
+                            echo "<td>" . $row->insert_by . "</td>";
+                            echo "<td>" . $row->insert_date . "</td>";
+                            echo "<td>" . $row->last_update . "</td>";
+                        ?>
+                            <td>
+                                <a href="kategori/delete_kategori/<?= $row->id_kategori ?>" class="badge badge-danger ">Delete</a>
+                                <a href="kategori/update/<?= $row->id_kategori ?>" class="badge badge-success ">Update</a>
 
+                            </td>
+                        <?php
+                            echo "</tr>";
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
