@@ -51,6 +51,18 @@ class Kursus extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    function detail($id_kursus)
+    {
+        $data['judul'] = 'Update Kursus';
+        $data['id_kursus'] = $id_kursus;
+        $data['kategori'] = $this->m_kategori->display();
+        $data['bahasa']=$this->m_bahasa->display();
+        $data['kursus'] = $this->m_kursus->display_byID($id_kursus);
+        $this->load->view('templates/header', $data);
+        $this->load->view('kursus/detail_kursus', $data);
+        $this->load->view('templates/footer');
+    }
+
     function insert_kursus()
     {
         $data = array(
