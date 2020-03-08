@@ -4,56 +4,65 @@
             <div class="card-body">
                 <a href="<?= base_url() ?>Kursus" class="btn btn-primary">Kembali</a>
                 <p class="h1">Insert data Kursus</p>
-                <form action="php/dokter_insert.php" method="POST">
-                    <label for="judulkursus" class="">Judul</label>
-                    <input name="judulkursus" type="text" class="form-control">
-
-                    <label for="deskripsisingkat" class="">Deskripsi Singkat</label>
-                    <textarea name="deskripsisingkat" type="textarea" class="form-control"> </textarea>
-
-                    <label for="deskripsifull" class="">Deskripsi Full</label>
-                    <textarea name="deskripsifull" type="textarea" class="form-control"> </textarea>
+                <form action="<?= base_url() ?>kursus/insert_kursus" method="POST">
+                    <?php
+                    $csrf = array(
+                        'name' => $this->security->get_csrf_token_name(),
+                        'hash' => $this->security->get_csrf_hash()
+                    );
+                    ?>
+                    <label for="kursus" class="">Judul</label>
+                    <input name="kursus" type="text" class="form-control">
 
                     <label for="harga" class="">Harga</label>
-                    <input name="harga" type="text" class="form-control">
+                    <input name="harga" type="number" class="form-control">
+
+                    
+                    <div class="divider"></div>
+
+                    <label for="deskripsi_singkat" class="">Deskripsi Singkat</label>
+                    <textarea name="deskripsi_singkat" type="textarea" class="form-control"> </textarea>
+
+                    <label for="deskripsi_full" class="">Deskripsi Full</label>
+                    <textarea name="deskripsi_full" type="textarea" class="form-control"> </textarea>
+
 
                     <label for="persyaratan" class="">Persyaratan</label>
                     <textarea name="persyaratan" type="textarea" class="form-control"> </textarea>
 
-                    <label for="dokterpengajar" class="">Dokter Pengajar</label>
-                    <textarea name="dokterpengajar" type="textarea" class="form-control"> </textarea>
+                    <label for="dokter" class="">Dokter Pengajar</label>
+                    <textarea name="dokter" type="textarea" class="form-control"> </textarea>
+                    <div class="divider"></div>
 
-                    <label for="kategorikursus" class="">Kategori Kursus</label>
-                    <h6><select name="kategorikursus">
-                            <option value="gigigeraham">Gigi Geraham</option>
-                            <option value="gigisusu">Gigi Susu</option>
-                            <option value="gigidepan">Gigi Depan</option>
-                            <option value="behelgigi">Behel Gigi</option>
-                            <option value="kesehatangigi">Kesehatan Gigi</option>
-                        </select>
+                    <label for="id_kategori" class="">Kategori</label>
+                    <select name="id_kategori" class="mb-2 form-control">
+                        <?php
+                        foreach ($kategori as $row) { ?>
+                            <option value="<?= $row->id_kategori ?>"><?= $row->kategori ?></option>
+                        <?php } ?>
+                    </select>
+                    <label for="id_bahasa" class="">Bahasa</label>
+                    <select name="id_bahasa" class="mb-2 form-control">
+                        <?php
+                        foreach ($bahasa as $row) { ?>
+                            <option value="<?= $row->id_bahasa ?>"><?= $row->bahasa ?></option>
+                        <?php } ?>
+                    </select>
+                    <label for="id_subtitle" class="">Subtitle</label>
+                    <select name="id_subtitle" class="mb-2 form-control">
+                        <?php
+                        foreach ($bahasa as $row) { ?>
+                            <option value="<?= $row->id_bahasa ?>"><?= $row->bahasa ?></option>
+                        <?php } ?>
+                    </select>
+                    <input type="hidden" name="<?= $csrf['name']; ?>" value="<?= $csrf['hash']; ?>" />
 
-                        <div class="divider"></div>
 
-                        <label for="bahasa" class="">Bahasa</label>
-                        <h6><select name="bahasa">
-                                <option value="bhsindonesia">Bahasa Indonesia</option>
-                                <option value="bhsinggris">Bahasa Inggris</option>
-                                <option value="bhsarab">Bahasa Arab</option>
-                                <option value="bhsjerman">Bahasa Jerman</option>
-                                <option value="bhsrusia">Bahasa Rusia</option>
-                            </select>
-
-                            <div class="divider"></div>
-
-                            <label for="subtitle" class="">Subtitle</label>
-                            <h6><select name="subtitle">
-                                    <option value="indonesia">Indonesia</option>
-                                    <option value="inggris">Inggris</option>
-                                    <option value="arab">Arab</option>
-                                </select>
-
-                                <div class="divider"></div>
-                                <button type="submit" class="btn btn-primary" name="insert">Insert</button>
+                    <div class="divider"></div>
+                    <label for="gambar" class="">File Gambar</label>
+                    <input name="gambar" type="file" class="form-control-file">
+                    <div class="divider"></div>
+                    <button type="submit" class="btn btn-primary" name="insert">Insert</button>
                 </form>
             </div>
         </div>

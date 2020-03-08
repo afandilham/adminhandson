@@ -4,19 +4,30 @@
             <div class="card-body">
                 <a href="<?= base_url() ?>Kategori" class="btn btn-primary">Kembali</a>
                 <p class="h1">Update data Kategori</p>
-                <form action="php/kategori_update.php" method="POST">
-                        <label for="namakategori" class="">Nama Kategori</label>
-                        <input name="namakategori" type="text" class="form-control">
+                <form action="<?= base_url() ?>kategori/update_kategori" method="POST">
+                    <?php
+                    $csrf = array(
+                        'name' => $this->security->get_csrf_token_name(),
+                        'hash' => $this->security->get_csrf_hash()
+                    );
+                    foreach ($kategori as $row) {
+                    ?>
 
+                        <label for="kategori" class="">Kategori</label>
+                        <input name="kategori" type="text" class="form-control" value="<?= $row->kategori ?>"> </input>
                         <label for="deskripsi" class="">Deskripsi Kategori</label>
-                        <textarea name="deskripsi" type="textarea" class="form-control"> </textarea>
-
+                        <textarea name="deskripsi" type="textarea" class="form-control"><?= $row->deskripsi ?></textarea>
+                        <input type="hidden" name="<?= $csrf['name']; ?>" value="<?= $csrf['hash']; ?>" />
+                        <input type="hidden" name="id_kategori" value="<?= $id_kategori ?>" />
                         <div class="divider"></div>
                         <button type="submit" class="btn btn-primary" name="update">Update</button>
-
-                    </form>
-                </div>
+                    <?php
+                        echo "</tr>";
+                    }
+                    ?>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </div>

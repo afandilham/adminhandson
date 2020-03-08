@@ -22,23 +22,30 @@
                             <th>Judul</th>
                             <th>Deskripsi Singkat</th>
                             <th>Harga</th>
-                            <th>Kategori</th>
+                            <th>Last Update</th>
                             <th>Menu</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>test</td>
-                            <td>test</td>
-                            <td><a href="<?= base_url(); ?>" class="badge badge-danger ">Hapus</a>
-                                <a href="<?= base_url(); ?>kursus/update" class="badge badge-success ">Update</a>
-                                <a href="<?= base_url(); ?>" class="badge badge-primary ">Detail</a>
-                            </td>
-                        </tr>
+                        <?php
+                        foreach ($kursus as $row) {
+                            echo "<tr>";
+                            echo "<td>" . $row->id_kursus . "</td>";
+                            echo "<td>" . $row->kursus . "</td>";
+                            echo "<td>" . $row->deskripsi_singkat . "</td>";
+                            echo "<td>" . $row->harga . "</td>";
+                            echo "<td>" . $row->last_update . "</td>";
+                        ?>
+                            <td>
+                                <a href="kursus/delete_kursus/<?= $row->id_kursus ?>" class="badge badge-danger ">Delete</a>
+                                <a href="kursus/update/<?= $row->id_kursus ?>" class="badge badge-success ">Update</a>
+                                <a href="kursus/detail/<?= $row->id_kursus ?>" class="badge badge-primary ">Detail</a>
 
+                            </td>
+                        <?php
+                            echo "</tr>";
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
